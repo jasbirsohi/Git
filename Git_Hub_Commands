@@ -51,3 +51,22 @@ git status
 # If you want to reverse the tracked file to untracked file
 # (use "git restore --staged <file>..." to unstage)
 
+
+# To pull the latest changes from an online Git repository, you can use the following commands:
+
+# If you don’t have any local changes (including untracked files) and just want to overwrite your local code with the latest version from the repo, you can do the following:
+git reset --hard HEAD
+git clean -xffd
+git pull
+
+# Explanation:
+
+git reset --hard HEAD: Resets your working directory to the latest commit, discarding any local changes.
+git clean -xffd: Removes untracked files and directories.
+git pull: Fetches the latest changes from the remote repository and merges them into your local branch1.
+
+# If you want a more straightforward approach without cleaning untracked files, simply use:
+git reset --hard HEAD
+git pull
+
+# Remember that these commands will discard any local changes, so use them carefully
